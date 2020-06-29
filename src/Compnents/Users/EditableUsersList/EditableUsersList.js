@@ -9,6 +9,9 @@ const EditableUsersList = (props) => (
                 key={user.id}
                 user={user}
                 editUser={props.editUser}
+                cancelEdit={() => props.cancelEdit(user)}
+                isEditing={user.isEditing}
+                onClose={() => props.deleteUser(user)}
             />))
         }
     </div>

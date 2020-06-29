@@ -3,7 +3,7 @@ import { UserForm, User } from '../../Users';
 
 class EditableUser extends Component {
     state = {
-        isEditing: false
+        isEditing: this.props.isEditing || false
     }
 
     edit = () => {
@@ -17,14 +17,16 @@ class EditableUser extends Component {
         this.setState({
             ...this.state,
             isEditing: false
-        })
+        }, () => this.props.cancelEdit());
     }
 
     editUser = (user) => {
-        this.props.editUser(user);
-        this.cancelEdit();
+        this.setState({
+            ...this.state,
+            isEditing: false
+        }, () => this.props.editUser(user));
     }
-    
+
     render() {
         if (this.state.isEditing) {
             return <UserForm
