@@ -1,0 +1,7 @@
+.InputContainer{
+    box-sizing: border-box;
+}
+.InputContainer span{
+    font-size: 12px;
+    line-height: 12px;
+}

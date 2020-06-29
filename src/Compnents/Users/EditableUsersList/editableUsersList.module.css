@@ -1,0 +1,43 @@
+.UsersList {
+    width: 80vw;
+    max-width: 600px;
+    min-width: 330px;
+    max-height: 85vh;
+    overflow-y: scroll;
+    margin: 20px auto;
+    display: flexbox;
+    justify-content: space-between;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.EditableListItem:nth-child(2n+1) {
+    margin-right: 20%;
+}
+
+.EditableListItem {
+    margin-bottom: 10px;
+    min-height: 100px;
+    padding: 10px 20px 30px 20px;
+    width: 40%;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    flex-direction: column;
+}

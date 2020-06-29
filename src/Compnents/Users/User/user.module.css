@@ -1,0 +1,29 @@
+.User img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #e1e4e8;
+}
+
+.User a {
+    width: 100%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.User span {
+    font-size: 20px;
+    color: #666;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.User h3 {
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.Texts {
+    padding: 16px 0px;
+}
