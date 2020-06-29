@@ -36,6 +36,6 @@ export const Button = (props) => {
     if (config.classNames && Array.isArray(config.classNames)) {
         config.classNames = config.classNames.join(" ");
     }
-    
+
     return (<button onClick={config.clicked} className={config.classNames}>{config.text}</button>)
 };

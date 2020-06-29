@@ -12,6 +12,7 @@ class EditableUser extends Component {
             isEditing: true
         })
     }
+
     cancelEdit = () => {
         this.setState({
             ...this.state,
@@ -19,10 +20,16 @@ class EditableUser extends Component {
         })
     }
 
+    editUser = (user) => {
+        this.props.editUser(user);
+        this.cancelEdit();
+    }
+    
     render() {
         if (this.state.isEditing) {
             return <UserForm
                 {...this.props}
+                editUser={this.editUser}
                 cancelEdit={this.cancelEdit}
             />
         }

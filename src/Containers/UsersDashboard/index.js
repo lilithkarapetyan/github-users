@@ -16,19 +16,14 @@ class UsersDashboard extends Component {
         }));
     }
 
-    editUser = (id, user) => {
-        console.log(`the user with id ${id} is replaced with `, user);
-    }
-
-    onChange = (id, field, value) => {
-        const newUsers = this.state.users.map(user => {
-            if (user.id == id) {
+    editUser = (user) => {
+        const newUsers = this.state.users.map(u => {
+            if (u.id === user.id) {
                 return {
-                    ...user,
-                    [field]: value
+                    ...user
                 };
             }
-            return user;
+            return u;
         })
 
         this.setState({
@@ -45,7 +40,7 @@ class UsersDashboard extends Component {
                 <EditableUsersList
                     users={this.state.users}
                     editUser={this.editUser}
-                    onChange={this.onChange} />
+                />
             </div>
         )
     }

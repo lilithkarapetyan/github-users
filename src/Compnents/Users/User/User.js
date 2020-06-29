@@ -4,7 +4,7 @@ import listClasses from '../EditableUsersList/editableUsersList.module.css';
 import { Button, ButtonTypes } from '../../UI';
 
 const User = (props) => (
-    <div className={[classes.User, props.edit ? listClasses.EditableListItem : ""].join(" ")}>
+    <div className={[classes.User, listClasses.EditableListItem].join(" ")}>
         <a href={props.user.html_url} target="_blank" rel="noopener noreferrer">
             <img src={props.user.avatar_url} alt="avatar pic" />
         </a>
