@@ -3,5 +3,7 @@
 }
 .InputContainer span{
     font-size: 12px;
-    line-height: 12px;
+    line-height: 16px;
+    display: block;
+    width: 100%;
 }
