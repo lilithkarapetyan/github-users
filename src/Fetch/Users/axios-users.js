@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
   baseURL: 'https://api.github.com/users',
-  timeout: 1000
+  timeout: 10000
 });
 
 axiosInstance.interceptors.response.use(response => response, (error) => {
